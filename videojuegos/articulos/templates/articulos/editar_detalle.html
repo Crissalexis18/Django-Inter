@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block titulo %}
+    {% blocktrans trimmed %} Editar detalles {% endblocktrans %}
+{% endblock titulo %}
+
+{% block contenido %}
+    <h1>{% blocktrans trimmed %} Editar detalles {% endblocktrans %}</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn btn-success" type="submit" 
+        {% if accion == 'Nueva' %}
+            value="{% blocktrans trimmed %} Agregar {% endblocktrans %}"
+        {% else %}
+            value="{% blocktrans trimmed %} Guardar {% endblocktrans %}"
+        {% endif %}
+        >
+        <a class="btn btn-danger" href="{% url 'detalles' %}">{% blocktrans trimmed %} Regresar {% endblocktrans %}</a>
+
+    </form>
+{% endblock contenido %}
+
+{% block scripts %}
+    {% comment %} <script src="{% static 'dist/js/pages/dashboard3.js' %}"></script> {% endcomment %}
+{% endblock scripts %}

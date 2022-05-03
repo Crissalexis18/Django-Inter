@@ -1,0 +1,294 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-02 02:05-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: articulos/models.py:5
+msgid "Acción"
+msgstr "Action"
+
+#: articulos/models.py:6
+msgid "Aventura"
+msgstr "Adventure"
+
+#: articulos/models.py:7
+msgid "Carrera"
+msgstr "Race"
+
+#: articulos/models.py:11 articulos/models.py:22 articulos/models.py:29
+msgid "nombre"
+msgstr "Name"
+
+#: articulos/models.py:12 articulos/models.py:23
+#: articulos/templates/articulos.html:14
+#: articulos/templates/articulos/categoria_list.html:27
+msgid "Descripción"
+msgstr "Description"
+
+#: articulos/models.py:13
+msgid "stock"
+msgstr "Stock"
+
+#: articulos/models.py:14 articulos/templates/articulos.html:16
+msgid "Género"
+msgstr "Genre"
+
+#: articulos/models.py:15 articulos/templates/articulos.html:17
+msgid "Categoría"
+msgstr "Category"
+
+#: articulos/models.py:16
+msgid "Imágenes de artículo"
+msgstr "Item images"
+
+#: articulos/models.py:30 usuarios/models.py:11
+msgid "Foto"
+msgstr "Photo"
+
+#: articulos/templates/articulos.html:5
+msgid "Lista videojuegos"
+msgstr "Videogames list"
+
+#: articulos/templates/articulos.html:9
+msgid "Lista artículos"
+msgstr "Items list"
+
+#: articulos/templates/articulos.html:13
+#: articulos/templates/articulos/categoria_list.html:26
+#: articulos/templates/articulos/detallearticulos_list.html:13
+#: articulos/templates/articulos/detalles.html:13
+msgid "Nombre"
+msgstr "Name"
+
+#: articulos/templates/articulos.html:15
+msgid "Stock"
+msgstr "Stock"
+
+#: articulos/templates/articulos.html:18
+#: articulos/templates/articulos/detalles.html:14
+msgid "Opciones"
+msgstr "Options"
+
+#: articulos/templates/articulos.html:29
+msgid "No cuenta con fotos"
+msgstr "Doesn't have photos"
+
+#: articulos/templates/articulos.html:36
+msgid "Detalles"
+msgstr "Details"
+
+#: articulos/templates/articulos.html:37
+#: articulos/templates/articulos/categoria_list.html:42
+#: articulos/templates/articulos/detalles.html:22
+msgid "Editar"
+msgstr "Edit"
+
+#: articulos/templates/articulos.html:38
+#: articulos/templates/articulos/categoria_confirm_delete.html:9
+#: articulos/templates/articulos/categoria_list.html:43
+#: articulos/templates/articulos/detalles.html:23
+msgid "Eliminar"
+msgstr "Delete"
+
+#: articulos/templates/articulos.html:44
+msgid "No existen artículos registrados"
+msgstr "There are no registered items"
+
+#: articulos/templates/articulos/categoria_confirm_delete.html:8
+msgid "¿Deseas eliminar la categoría"
+msgstr "Do you want to delete the category"
+
+#: articulos/templates/articulos/categoria_confirm_delete.html:10
+#: articulos/templates/articulos/categoria_form.html:22
+#: articulos/templates/articulos/detallearticulos_form.html:21
+#: articulos/templates/articulos/editar_detalle.html:21
+#: articulos/templates/editar_articulo.html:15
+#: articulos/templates/nuevo_articulo.html:16
+#: usuarios/templates/usuarios/datospersonales_form.html:16
+msgid "Regresar"
+msgstr "Go back"
+
+#: articulos/templates/articulos/categoria_form.html:7
+#: articulos/templates/articulos/categoria_form.html:11
+msgid "categoría"
+msgstr "Category"
+
+#: articulos/templates/articulos/categoria_form.html:17
+#: articulos/templates/articulos/detallearticulos_form.html:16
+#: articulos/templates/articulos/editar_detalle.html:16
+#: articulos/templates/nuevo_articulo.html:15
+msgid "Agregar"
+msgstr "Add"
+
+#: articulos/templates/articulos/categoria_form.html:19
+#: articulos/templates/articulos/detallearticulos_form.html:18
+#: articulos/templates/articulos/editar_detalle.html:18
+#: articulos/templates/editar_articulo.html:14
+#: usuarios/templates/usuarios/datospersonales_form.html:15
+msgid "Guardar"
+msgstr "Save"
+
+#: articulos/templates/articulos/categoria_list.html:5
+#: articulos/templates/articulos/categoria_list.html:9
+msgid "Lista de categorías"
+msgstr "Category list"
+
+#: articulos/templates/articulos/categoria_list.html:38
+msgid "No cuenta con descripción"
+msgstr "It doesn't have a description"
+
+#: articulos/templates/articulos/categoria_list.html:49
+msgid "No existen categorías registradas"
+msgstr "There are no registered categories"
+
+#: articulos/templates/articulos/detallearticulos_form.html:6
+#: articulos/templates/articulos/detallearticulos_form.html:10
+msgid "Agregar Imágenes"
+msgstr "Add images"
+
+#: articulos/templates/articulos/detallearticulos_list.html:5
+#: articulos/templates/articulos/detallearticulos_list.html:9
+msgid "Detalles del artículo"
+msgstr "Item details"
+
+#: articulos/templates/articulos/detallearticulos_list.html:14
+msgid "Fotografías"
+msgstr "Photos"
+
+#: articulos/templates/articulos/detallearticulos_list.html:28
+msgid "No cuenta con fotografías"
+msgstr "Doesn't have photos"
+
+#: articulos/templates/articulos/detalles.html:5
+#: articulos/templates/articulos/detalles.html:9
+msgid "Lista de imágenes"
+msgstr "List of images"
+
+#: articulos/templates/articulos/detalles.html:31
+msgid "No existen detalles registrados"
+msgstr "There are no details recorded"
+
+#: articulos/templates/articulos/editar_detalle.html:6
+#: articulos/templates/articulos/editar_detalle.html:10
+msgid "Editar detalles"
+msgstr "Edit details"
+
+#: articulos/templates/base.html:43 articulos/templates/base.html:269
+msgid "Inicio"
+msgstr "Home"
+
+#: articulos/templates/base.html:184
+msgid "Cerrar sesión"
+msgstr "Sign off"
+
+#: articulos/templates/base.html:198
+msgid "Artículos"
+msgstr "Items"
+
+#: articulos/templates/base.html:206 articulos/templates/base.html:241
+msgid "Lista"
+msgstr "List"
+
+#: articulos/templates/base.html:212
+msgid "Nuevo"
+msgstr "New"
+
+#: articulos/templates/base.html:218
+msgid "Crear Imágen"
+msgstr "Create Image"
+
+#: articulos/templates/base.html:224
+msgid "Lista Imágenes"
+msgstr "Images List"
+
+#: articulos/templates/base.html:233
+msgid "Categorías"
+msgstr "Images List"
+
+#: articulos/templates/base.html:247 articulos/views_categoria.py:22
+msgid "Nueva"
+msgstr "New"
+
+#: articulos/templates/bienvenida.html:5
+msgid "Bienvenido al sistema de videojuegos"
+msgstr "Welcome to the videogame system"
+
+#: articulos/templates/bienvenida.html:11
+msgid "Bienvenido a mi sitio"
+msgstr "Welcome to my site"
+
+#: articulos/templates/editar_articulo.html:5
+#: articulos/templates/editar_articulo.html:10
+msgid "Modificar artículo"
+msgstr "Modify item"
+
+#: articulos/templates/nuevo_articulo.html:7
+msgid "Nuevo videojuego"
+msgstr "New videogame"
+
+#: articulos/templates/nuevo_articulo.html:11
+msgid "Nuevo artículo"
+msgstr "New item"
+
+#: usuarios/models.py:9
+msgid "Dirección"
+msgstr "Address"
+
+#: usuarios/models.py:10
+msgid "Teléfono"
+msgstr "Phone Number"
+
+#: usuarios/models.py:12
+msgid "Usuario"
+msgstr "User"
+
+#: usuarios/templates/login.html:8
+msgid "Login Videojuegos"
+msgstr "Login Videogames"
+
+#: usuarios/templates/login.html:27
+msgid "Ingresa tus datos para entrar al sistema"
+msgstr "Login VideoGames"
+
+#: usuarios/templates/login.html:33
+msgid "Verifica tus datos de acceso."
+msgstr "Check your access data."
+
+#: usuarios/templates/login.html:72
+msgid "Recuerdame"
+msgstr "Remember me"
+
+#: usuarios/templates/login.html:78
+msgid "Ingresar"
+msgstr "Log In"
+
+#: usuarios/templates/login.html:87
+msgid "Registrar nuevo usuario"
+msgstr "Register new user"
+
+#: usuarios/templates/usuarios/datospersonales_form.html:7
+#: usuarios/templates/usuarios/datospersonales_form.html:11
+msgid "Perfil"
+msgstr "Profile"
+
+#: videojuegos/settings.py:73
+msgid "Español"
+msgstr "Spanish"
+
+#: videojuegos/settings.py:74
+msgid "English"
+msgstr "English"

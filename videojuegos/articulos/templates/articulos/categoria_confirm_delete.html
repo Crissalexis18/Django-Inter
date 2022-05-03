@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block contenido %}
+    <form method="post" class="form">
+        {% csrf_token %}
+        <p> {% blocktrans trimmed %} ¿Deseas eliminar la categoría {% endblocktrans %} <b>{{object}}</b>?</p>
+        <input type="submit" value=" {% blocktrans trimmed %} Eliminar {% endblocktrans %}" class="btn btn-danger">
+        <a class="btn btn-secondary" href="{% url 'categorias_lista' %}"> {% blocktrans trimmed %} Regresar {% endblocktrans %} </a>
+    </form>
+{% endblock contenido %}
