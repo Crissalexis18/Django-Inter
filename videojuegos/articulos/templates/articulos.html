@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block titulo %}
+    {% blocktrans trimmed %} Lista videojuegos {% endblocktrans %}
+{% endblock titulo %}
+
+{% block contenido %}
+    <h1>{% blocktrans trimmed %} Lista artículos {% endblocktrans %}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{% blocktrans trimmed %} Nombre {% endblocktrans %} </th>
+                <th>{% blocktrans trimmed %} Descripción {% endblocktrans %}</th>
+                <th>{% blocktrans trimmed %} Stock {% endblocktrans %}</th>
+                <th>{% blocktrans trimmed %} Género {% endblocktrans %}</th>
+                <th>{% blocktrans trimmed %} Categoría {% endblocktrans %}</th>
+                <th>{% blocktrans trimmed %} Opciones {% endblocktrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for articulo in articulos  %}
+                <tr>
+                    <td>{{articulo.nombre}}</td>
+                    <td>
+                        {% if articulo.decripcion %}
+                            {{articulo.decripcion}}    
+                        {% else %}
+                        {% blocktrans trimmed %} No cuenta con fotos {% endblocktrans %}
+                        {% endif %}
+                    </td>
+                    <td>{{articulo.stock}}</td>
+                    <td>{{articulo.genero}}</td>
+                    <td>{{articulo.categoria.nombre}}</td>
+                    <td>
+                        <a class="btn btn-outline-success btn-sm" href="{% url 'detalles_lista' articulo.id %}">{% blocktrans trimmed %} Detalles {% endblocktrans %}</a>
+                        <a class="btn btn-outline-primary btn-sm" href="{% url 'editar_articulos' articulo.id %}">{% blocktrans trimmed %} Editar {% endblocktrans %}</a>
+                        <a class="btn btn-outline-warning btn-sm" href="{% url 'eliminar_articulos' articulo.id %}">{% blocktrans trimmed %} Eliminar {% endblocktrans %}</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5">
+                        <p>{% blocktrans trimmed %} No existen artículos registrados {% endblocktrans %}</p>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}

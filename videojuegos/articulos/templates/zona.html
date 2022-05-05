@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+{% load i18n %}
+{% load tz %}
+{% get_current_timezone as TIME_ZONE %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>{% blocktrans trimmed %} Elige Zona Horaria {% endblocktrans %} </th>
+        </tr>
+        <td>
+            <h2>{% trans 'Zona Horaria Actual'%}: {{TIME_ZONE}}</h2>
+        </td>
+    </thead>
+    <tbody>
+        <form action="{% url 'zona_horaria' %}" method="POST">
+            {% csrf_token %}
+            <tr>
+                <td>
+                    <select name="timezone">
+                        {% for key, value in timezones.items %}
+                        <option value="{{ value }}"{% if value == TIME_ZONE %} selected{% endif %}>{{ key }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+                <td>
+                    <input type="submit" value="{% blocktrans trimmed %} Guardar {% endblocktrans %}">
+                </td>
+            </tr>
+        </form>
+    </tbody>
+</table>
+{% endblock %}

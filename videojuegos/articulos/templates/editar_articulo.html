@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block titulo %}
+    {% blocktrans trimmed %} Modificar artículo {% endblocktrans %}
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <h1>{% blocktrans trimmed %} Modificar artículo {% endblocktrans %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="{% blocktrans trimmed %} Guardar {% endblocktrans %}">
+        <a href="{% url 'articulos_lista' %}">{% blocktrans trimmed %} Regresar {% endblocktrans %}</a>
+
+    </form>
+{% endblock contenido %}

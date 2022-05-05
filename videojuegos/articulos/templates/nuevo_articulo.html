@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block titulo %}
+    {% blocktrans trimmed %} Nuevo videojuego {% endblocktrans %}
+{% endblock titulo %}
+
+{% block contenido %}
+    <h1> {% blocktrans trimmed %} Nuevo artículo {% endblocktrans %} </h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn btn-success" type="submit" value=" {% blocktrans trimmed %} Agregar {% endblocktrans %}">
+        <a class="btn btn-danger" href="{% url 'articulos_lista' %}">{% blocktrans trimmed %} Regresar {% endblocktrans %}</a>
+
+    </form>
+{% endblock contenido %}
+
+{% block scripts %}
+    {% comment %} <script src="{% static 'dist/js/pages/dashboard3.js' %}"></script> {% endcomment %}
+{% endblock scripts %}

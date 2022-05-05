@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block titulo %}
+    {% blocktrans trimmed %} Lista de imágenes {% endblocktrans %}
+{% endblock titulo %}
+
+{% block contenido %}
+    <h1>{% blocktrans trimmed %} Lista de imágenes {% endblocktrans %}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{% blocktrans trimmed %} Nombre {% endblocktrans %}</th>
+                <th>{% blocktrans trimmed %} Opciones {% endblocktrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for articulo in articulos  %}
+                <tr>
+                    <td>{{articulo.nombre}}</td>
+                    <td>
+                        <a class="btn btn-outline-primary btn-sm" href="{% url 'editar_detalle' articulo.id %}">{% blocktrans trimmed %} Editar {% endblocktrans %}</a>
+                        <a class="btn btn-outline-warning btn-sm" href="{% url 'eliminar_detalle' articulo.id %}">{% blocktrans trimmed %} Eliminar {% endblocktrans %}</a>
+                    </td>
+                    <td>
+
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5">
+                        <p>{% blocktrans trimmed %} No existen detalles registrados{% endblocktrans %} </p>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}

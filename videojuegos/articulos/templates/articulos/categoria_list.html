@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block titulo %}
+    {% blocktrans trimmed %} Lista de categorías{% endblocktrans %}
+{% endblock titulo %}
+
+{% block contenido %}
+    <h1>{% blocktrans trimmed %} Lista de categorías {% endblocktrans %}</h1>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <div class="alert alert-danger">
+                    {{message}}
+                </div>
+            {% else %}
+                <div class="alert alert-success">
+                    {{message}}
+                </div>
+            {% endif %}        
+        {% endfor %}
+    {% endif %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{% blocktrans trimmed %} Nombre {% endblocktrans %}</th>
+                <th>{% blocktrans trimmed %} Descripción {% endblocktrans %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for categoria in object_list  %}
+                <tr>
+                    <td>{{categoria.nombre}}</td>
+                    <td>
+                        {% if categoria.descripcion %}
+                            {{categoria.descripcion}}    
+                        {% else %}
+                            {% blocktrans trimmed %} No cuenta con descripción {% endblocktrans %}
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-primary btn-sm" href="{% url 'editar_categoria' categoria.id %}">{% blocktrans trimmed %} Editar {% endblocktrans %}</a>
+                        <a class="btn btn-outline-warning btn-sm" href="{% url 'eliminar_categoria' categoria.id %}">{% blocktrans trimmed %} Eliminar {% endblocktrans %}</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5">
+                        <p>{% blocktrans trimmed %} No existen categorías registradas {% endblocktrans %}</p>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}
